@@ -47,6 +47,7 @@ func HowLong (k: Double, r: Double, S: Double) -> Int{
   var Sd: Double = S
   rd = rd / 12
   var interestPaid: Double
+  assert(k> S * rd, "You will never pay off your loan, you need to pay more!")
   while(Sd>0){
     interestPaid = Sd*rd
     Sd -= k - interestPaid      //Sd * rd is the interest that's been paid
